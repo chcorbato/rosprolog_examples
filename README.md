@@ -1,6 +1,6 @@
 # rosprolog_examples
 
-Examples using rosprolog.
+Examples using rosprolog for the course RO47014 of the MSc. Robotics of the Delft University of Technology.
 
 ## Installation
 - If you have a native ROS installation, you will need to install [`rosprolog`](https://github.com/knowrob/rosprolog) (see [KnowRob](https://github.com/knowrob/knowrob) for instructions).
