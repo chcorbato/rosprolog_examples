@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!-- launch file arguments for ROSProlog -->
+    <arg name="initial_package" default="rosprolog_examples" />
+    <arg name="initial_goal" default="true" />
+    <arg name="num_pl_threads" default="2" />
+    <arg name="num_ros_threads" default="4" />
+
+    <!-- start the ROSProlog node with the previous args -->
+    <param name="initial_package" type="string" value="$(arg initial_package)" />
+    <param name="initial_goal" type="string" value="$(arg initial_goal)" />
+    <param name="num_pl_threads" type="int" value="$(arg num_pl_threads)" />
+    <param name="num_ros_threads" type="int" value="$(arg num_ros_threads)" />
+    <node name="rosprolog" pkg="rosprolog" type="rosprolog_node" cwd="node" output="screen" />
+    
+    <!-- Launch example_query_prolog_kb node -->
+    <node name="query_prolog_kb" pkg="rosprolog_examples" type="example_query_prolog_kb.py" output="screen"/>
+
+</launch>
