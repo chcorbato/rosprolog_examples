@@ -26,5 +26,5 @@ It requires knowrob to load the ontology on the knowrob database, and then uses 
 
 You can try it executing the following command:
 ```
-roslaunch rosprolog_examples example_query_prolog.launch
+roslaunch rosprolog_examples example_query_owl.launch
 ```
