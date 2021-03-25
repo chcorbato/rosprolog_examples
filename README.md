@@ -12,5 +12,5 @@ Once you have completed the installation of KnowRob, you will need to clone this
 You can test the examples by using the available launchfiles.
 
 ```
-roslaunch rosprolog_examples example_query_prolog_db.launch
+roslaunch rosprolog_examples example_query_prolog_kb.launch
 ```
