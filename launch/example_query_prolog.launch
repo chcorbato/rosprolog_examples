@@ -14,6 +14,6 @@
     <node name="rosprolog" pkg="rosprolog" type="rosprolog_node" cwd="node" output="screen" />
     
     <!-- Launch example_query_prolog_kb node -->
-    <node name="query_prolog_kb" pkg="rosprolog_examples" type="example_query_prolog_kb.py" output="screen"/>
+    <node name="query_prolog_kb" pkg="rosprolog_examples" type="example_query_prolog.py" output="screen"/>
 
 </launch>

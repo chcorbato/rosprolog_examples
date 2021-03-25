@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <include file="$(find rosprolog)/launch/rosprolog.launch">
+        <arg name="initial_package" default="knowrob" />
+        <arg name="initial_goal" default="true" />
+    </include>
+    <!-- Launch example_query_prolog_kb node -->
+    <node name="query_prolog_kb" pkg="rosprolog_examples" type="example_query_owl.py" output="screen"/>
+
+</launch>

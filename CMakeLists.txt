@@ -10,11 +10,16 @@ project(rosprolog_examples)
 find_package(catkin REQUIRED COMPONENTS
   rosprolog
   rospy
+  knowrob
 )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
+# find SWI Prolog libraries
+find_package(PkgConfig)
+pkg_check_modules(SWIPL REQUIRED swipl)
+include_directories(${SWIPL_INCLUDE_DIRS})
+link_directories(${SWIPL_LIBRARY_DIRS})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
