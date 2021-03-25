@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ro47014/ontologies/2021/course-project-example#"
+     xml:base="http://ro47014/ontologies/2021/course-project-example"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ro47014/ontologies/2021/course-project-example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#canHold -->
+
+    <owl:ObjectProperty rdf:about="http://ro47014/ontologies/2021/course-project-example#canHold">
+        <rdfs:domain rdf:resource="http://ro47014/ontologies/2021/course-project-example#Furniture"/>
+        <rdfs:range rdf:resource="http://ro47014/ontologies/2021/course-project-example#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#carry -->
+
+    <owl:ObjectProperty rdf:about="http://ro47014/ontologies/2021/course-project-example#carry">
+        <rdfs:subPropertyOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#manipulate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#grab -->
+
+    <owl:ObjectProperty rdf:about="http://ro47014/ontologies/2021/course-project-example#grab">
+        <rdfs:subPropertyOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#manipulate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#manipulate -->
+
+    <owl:ObjectProperty rdf:about="http://ro47014/ontologies/2021/course-project-example#manipulate">
+        <rdfs:domain rdf:resource="http://ro47014/ontologies/2021/course-project-example#Robot"/>
+        <rdfs:range rdf:resource="http://ro47014/ontologies/2021/course-project-example#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#release -->
+
+    <owl:ObjectProperty rdf:about="http://ro47014/ontologies/2021/course-project-example#release">
+        <rdfs:subPropertyOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#manipulate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#AbstractThing -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#AbstractThing"/>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#CanBeMoved -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#CanBeMoved">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Moving"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#CanMove -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#CanMove">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Moving"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#ConcreteThing -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#ConcreteThing"/>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Food -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Food">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#CanBeMoved"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Furniture -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Furniture">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Static"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#GarbageBin -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#GarbageBin">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Hagelslag -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Hagelslag">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#NonPerishable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Honey -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Honey">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#NonPerishable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Location -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Location">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#AbstractThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Milk -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Milk">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Perishable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Moving -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Moving">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#ConcreteThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#NonPerishable -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#NonPerishable">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Perishable -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Perishable">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Robot -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Robot">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#CanMove"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Shelf -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Shelf">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Static -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Static">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#ConcreteThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Table -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Table">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#Yogurt -->
+
+    <owl:Class rdf:about="http://ro47014/ontologies/2021/course-project-example#Yogurt">
+        <rdfs:subClassOf rdf:resource="http://ro47014/ontologies/2021/course-project-example#Perishable"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#hagelslag1 -->
+
+    <owl:NamedIndividual rdf:about="http://ro47014/ontologies/2021/course-project-example#hagelslag1">
+        <rdf:type rdf:resource="http://ro47014/ontologies/2021/course-project-example#Hagelslag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#milk1 -->
+
+    <owl:NamedIndividual rdf:about="http://ro47014/ontologies/2021/course-project-example#milk1">
+        <rdf:type rdf:resource="http://ro47014/ontologies/2021/course-project-example#Milk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#milk2 -->
+
+    <owl:NamedIndividual rdf:about="http://ro47014/ontologies/2021/course-project-example#milk2">
+        <rdf:type rdf:resource="http://ro47014/ontologies/2021/course-project-example#Milk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#table1 -->
+
+    <owl:NamedIndividual rdf:about="http://ro47014/ontologies/2021/course-project-example#table1">
+        <rdf:type rdf:resource="http://ro47014/ontologies/2021/course-project-example#Table"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#tiago -->
+
+    <owl:NamedIndividual rdf:about="http://ro47014/ontologies/2021/course-project-example#tiago">
+        <rdf:type rdf:resource="http://ro47014/ontologies/2021/course-project-example#Robot"/>
+        <carry rdf:resource="http://ro47014/ontologies/2021/course-project-example#milk2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ro47014/ontologies/2021/course-project-example#trash1 -->
+
+    <owl:NamedIndividual rdf:about="http://ro47014/ontologies/2021/course-project-example#trash1">
+        <rdf:type rdf:resource="http://ro47014/ontologies/2021/course-project-example#GarbageBin"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
