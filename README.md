@@ -5,10 +5,28 @@ Examples using rosprolog for the course RO47014 of the MSc. Robotics of the Delf
 ## Installation
 - If you have a **native ROS installation**, you will need to install [`rosprolog`](https://github.com/knowrob/rosprolog) (see [KnowRob](https://github.com/knowrob/knowrob) for instructions).
 - If you are using the **Singularity image** of the course RO47014
+  - Make sure you have built your course ws with the original image `ro47014-20-10-3.simg`
   - Download this other version of the Singularity image [**ro47014-21-2.simg**](https://surfdrive.surf.nl/files/index.php/s/jGh6kn9oZnObRyV), which includes SWI-Prolog and other KnowRob dependencies, and then install KnowRob too.
   - Install KnowRob starting in this [step](https://github.com/knowrob/knowrob#installation), without installing its requirements (they are included in the new Singularity image).
+- Clone this repository on your workspace and build it (do not forget to source your workspace after building it!).
 
-Once you have completed the installation of KnowRob, you will need to clone this repository on your workspace and build it (do not forget to source your workspace after building it!).
+**Note:**
+if you run into this error:
+```
+CMake Error at /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake:137 (message):
+Could NOT find BISON (missing: BISON_EXECUTABLE) (Required is at least
+version "3.0.4")
+```
+then proceed as follows:
+- clean your workspace: `catkin clean -y`
+- delete knowrob, rosprolog, iai_messages and rosprolog_examples form your src folder
+- switch to the older singularity image: `singularity shell -p <path to your image>/ro47014-20-10-3.simg`
+- build your workspace: `catkin b`
+- switch to the new singularity image: `singularity shell -p <path to your image>/ro47014-21-2.simg`
+- install KnowRob as explained above in `<your workspace>/src`
+- clone this repository in `<your workspace>/src`
+- build your workspace: `catkin b`
+
 
 ## Usage
 You can test the examples by using the available launchfiles.
